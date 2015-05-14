@@ -29,10 +29,12 @@ public class LinearRegression {
 
         regress(data, ALPHA, ITERATIONS);
 
-        System.out.println(thetas[0]+" + " + thetas[1] + "x");
+        for (int i = 0; i < thetas.length; i++) {
+            System.out.println("Theta_" + i + ": " + thetas[i]);
+        }
     }
 
-    public static double[] regress(final Matrix data, final float alpha, int iterations)
+    public static void regress(final Matrix data, final float alpha, int iterations)
     {
         double[] tempTheta = new double[thetas.length];
         for (int iter = 0; iter < iterations; iter++)
@@ -42,8 +44,6 @@ public class LinearRegression {
             }
             thetas = tempTheta;
         }
-
-        return thetas;
     }
 
     private static double jPartialDeriv(final int j, final Matrix data) {
