@@ -27,6 +27,8 @@ public class Matrix {
         return values.length;
     }
 
+    public int getNumCols() { return values[0].length; }
+
     public Double[][] getValues()
     {
         return this.values;
