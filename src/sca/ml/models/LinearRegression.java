@@ -3,23 +3,23 @@ package sca.ml.models;
 import sca.ml.util.Matrix;
 
 public class LinearRegression {
-    static float ALPHA = 0.01f;
+    static float ALPHA = 0.001f;
     static double threshold = 0.001d;
-    static int ITERATIONS = 100000;
+    static int ITERATIONS = 1000000;
 
     static double[] thetas;
 
     public static void main(String[] args)
     {
-        Matrix data = new Matrix(7, 3);
+        Matrix data = new Matrix(7, 4);
 
-        data.setRow(0, new Double[]{1.0, 1.17, 78.93});
-        data.setRow(1, new Double[]{1.0, 2.97, 58.2});
-        data.setRow(2, new Double[]{1.0, 3.26, 67.47});
-        data.setRow(3, new Double[]{1.0, 4.69, 37.47});
-        data.setRow(4, new Double[]{1.0, 5.83, 45.65});
-        data.setRow(5, new Double[]{1.0, 6.00, 32.92});
-        data.setRow(6, new Double[]{1.0, 6.41, 29.97});
+        data.setRow(0, new Double[]{1.0, 4.47, 1.17, 78.93});
+        data.setRow(1, new Double[]{1.0, 32.4, 2.97, 58.2});
+        data.setRow(2, new Double[]{1.0, 17.84, 3.26, 67.47});
+        data.setRow(3, new Double[]{1.0, 16.91, 4.69, 37.47});
+        data.setRow(4, new Double[]{1.0, 1.09, 5.83, 45.65});
+        data.setRow(5, new Double[]{1.0, 7.63, 6.00, 32.92});
+        data.setRow(6, new Double[]{1.0, 8.81, 6.41, 29.97});
 
         thetas = new double[data.getNumCols() - 1];
 
