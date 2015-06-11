@@ -1,6 +1,6 @@
-package sca.ml.models;
+package io.sawyeranderson.machinelearning.models.regression;
 
-import sca.ml.util.Matrix;
+import io.sawyeranderson.machinelearning.util.Matrix;
 
 public class LinearRegression {
     static float ALPHA = 0.001f;

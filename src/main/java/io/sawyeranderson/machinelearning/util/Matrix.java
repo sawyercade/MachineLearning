@@ -1,4 +1,4 @@
-package sca.ml.util;
+package io.sawyeranderson.machinelearning.util;
 
 public class Matrix {
     Double[][] values;

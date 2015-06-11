@@ -1,3 +1,5 @@
 .idea/
 out/
+src/main/java/lib/
 *.iml
+DS_STORE
